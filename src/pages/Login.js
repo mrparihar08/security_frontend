@@ -16,7 +16,7 @@ const Login = () => {
     setError('');
     setLoading(true);
     try {
-      const res = await api.post('/auth/login', { email, password });
+      const res = await api.post('/api/auth/login', { email, password });
       localStorage.setItem('security_token', res.data.access_token);
       navigate('/');
     } catch (err) {
